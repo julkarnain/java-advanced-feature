@@ -14,8 +14,8 @@ public class MapFilterReduceExercise {
 		int result = trainers.stream()
 				.filter(Trainer::isOnline)
 				.map(Trainer::getYearOfExperience)
-				//.reduce(0, (a, b) -> a + b); // same
-				.reduce(0, Integer::sum); // same as
+				.reduce(0, (a, b) -> a + b); // same
+				//.reduce(0, Integer::sum); // same as
 
 		System.out.println(result);
 	}
